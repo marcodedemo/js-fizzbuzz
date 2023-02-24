@@ -31,21 +31,30 @@ let counter = 0;
 
 for(i = 1; i <= 100; i++){
 
+
+
+
+
     counter++;
 
+    // SE il numero è divisibile per 3 && per 5 stampo FizzBuzz
     if (counter % 5 == 0 && counter % 3 == 0){
 
         console.log("FizzBuzz");
 
+    // ALTRIMENTI SE il numero è divisibile per 3 stampo Fizz
     } else if (counter % 3 == 0){
 
         console.log("Fizz");
 
+    // ALTRIMENTI SE il numero è divisibile per 5 stampo Buzz
     } else if (counter % 5 == 0 ){
 
         console.log("Buzz");
 
+    // ALTRIMENTI stampo il numero
     } else{
+
         console.log(counter);
     }
 
