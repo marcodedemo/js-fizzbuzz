@@ -29,10 +29,17 @@ Scrivi un programma che stampi in console i numeri da 1 a 100, ma che per i mult
 
 let counter = 0;
 
+let containerEl = document.getElementById("container");
+
+
+
 for(i = 1; i <= 100; i++){
 
+    // creo un div 
+    let squareEl = document.createElement("div");
 
-
+    // imposto containerEl come genitore di squareEl
+    containerEl.append(squareEl);
 
 
     counter++;
@@ -42,20 +49,33 @@ for(i = 1; i <= 100; i++){
 
         console.log("FizzBuzz");
 
+        squareEl.innerHTML = "FizzBuzz";
+        squareEl.classList.add("fizzclass","buzzclass");
+
     // ALTRIMENTI SE il numero è divisibile per 3 stampo Fizz
     } else if (counter % 3 == 0){
 
         console.log("Fizz");
+
+        squareEl.innerHTML = "Fizz";
+        squareEl.classList.add("fizzclass");
+
+
 
     // ALTRIMENTI SE il numero è divisibile per 5 stampo Buzz
     } else if (counter % 5 == 0 ){
 
         console.log("Buzz");
 
+        squareEl.innerHTML = "Buzz";
+        squareEl.classList.add("buzzclass");
+
     // ALTRIMENTI stampo il numero
     } else{
 
         console.log(counter);
+        squareEl.innerHTML = counter;
+
     }
 
     
